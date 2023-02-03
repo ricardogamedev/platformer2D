@@ -9,7 +9,11 @@ public class Player : MonoBehaviour
     public Vector2 friction = new Vector2(.1f, 0);
 
     public float speed;
+    public float speedRun;
+
     public float forceJump = 30;
+
+    private float _currentSpeed;
 
     private void Update()
     {
@@ -18,15 +22,22 @@ public class Player : MonoBehaviour
     }
     private void HandleMovement()
     {
+        if (Input.GetKey(KeyCode.LeftControl))
+            _currentSpeed = speedRun;
+        else 
+            _currentSpeed = speed;
+
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            myRigidbody.velocity = new Vector2(-speed, myRigidbody.velocity.y);
+            myRigidbody.velocity = new Vector2(-_currentSpeed, myRigidbody.velocity.y);
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
-            myRigidbody.velocity = new Vector2(speed, myRigidbody.velocity.y);
+            myRigidbody.velocity = new Vector2(_currentSpeed, myRigidbody.velocity.y);
         }
 
+        //nesse if de baixo, se a velocidade em x é maior que zero, personagem está andando. Aí eu desacelero com a fricção a cada frame
+        // a soma ou subtração da fricção depende do eixo X, para a esquerda ele é negativo, por isso vamos subtraindo
         if (myRigidbody.velocity.x > 0)
         {
             myRigidbody.velocity += friction;
@@ -35,7 +46,6 @@ public class Player : MonoBehaviour
         {
             myRigidbody.velocity -= friction;
         }
-
     }
 
     private void HandleJump()
