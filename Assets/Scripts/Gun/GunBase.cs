@@ -6,6 +6,7 @@ public class GunBase : MonoBehaviour
 {
     public ProjectileBase prefabProjectile;
     public Transform positionToShoot;
+    public Transform playerSideReference;
 
     public float timeBetweenShoot = .3f;
 
@@ -39,6 +40,7 @@ public class GunBase : MonoBehaviour
     {
         var projectile = Instantiate(prefabProjectile);
         projectile.transform.position = positionToShoot.position;
+        projectile.side = playerSideReference.transform.localScale.x;
     }
 
 }
