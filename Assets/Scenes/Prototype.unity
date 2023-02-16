@@ -468,6 +468,19 @@ MonoBehaviour:
   - {fileID: 1099524692}
   color: {r: 1, g: 0.5415094, b: 0.5415094, a: 1}
   duration: 0.1
+--- !u!114 &58899718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58899713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f891ab1d044844b937ee3491434dca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 544817965}
 --- !u!1 &110890525
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,8 +860,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b1783a204ae4a843863b18d0f66be4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLife: 10
-  destroyOnKill: 1
+  startLife: 3
+  destroyOnKill: 0
   delayToKill: 0
   _flashColor: {fileID: 0}
 --- !u!114 &269743839
@@ -1714,6 +1727,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1787329088918495457, guid: 358b09d999783e14d942aabe8b2acac7, type: 3}
   m_PrefabInstance: {fileID: 532100144}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &544817965 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7221358931808931423, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
+  m_PrefabInstance: {fileID: 7221358933068329190}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13acf52816082664d8b29074d8a96d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &552482515 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2401057342335875713, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
@@ -3194,6 +3218,8 @@ MonoBehaviour:
   damage: 10
   animator: {fileID: 0}
   triggerAttack: Attack
+  triggerKill: Kill
+  timeToDestroy: 1
   healthBase: {fileID: 0}
 --- !u!50 &1292331515
 Rigidbody2D:
@@ -4979,6 +5005,10 @@ PrefabInstance:
       propertyPath: healthBase
       value: 
       objectReference: {fileID: 269743838}
+    - target: {fileID: 1356911060076103385, guid: 041b42fb08da6414493b93c7239df696, type: 3}
+      propertyPath: triggerKill
+      value: Death
+      objectReference: {fileID: 0}
     - target: {fileID: 1356911060076103390, guid: 041b42fb08da6414493b93c7239df696, type: 3}
       propertyPath: m_Name
       value: PFB_Dev_Enemy_01
@@ -5325,6 +5355,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PFB_Dev_Enemy_02
       objectReference: {fileID: 0}
+    - target: {fileID: 8219005216835949545, guid: 0ef758f8af579214293d8bcf2e3d4753, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ef758f8af579214293d8bcf2e3d4753, type: 3}
 --- !u!1 &1294417434330486236 stripped
@@ -5425,6 +5459,10 @@ PrefabInstance:
       propertyPath: _flashColor
       value: 
       objectReference: {fileID: 58899715}
+    - target: {fileID: 7221358931808931420, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
+      propertyPath: destroyOnKill
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7221358931808931422, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -5473,5 +5511,20 @@ PrefabInstance:
       propertyPath: forceJump
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 7221358931808931423, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
+      propertyPath: healthBase
+      value: 
+      objectReference: {fileID: 7221358933068329191}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
+--- !u!114 &7221358933068329191 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7221358931808931420, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
+  m_PrefabInstance: {fileID: 7221358933068329190}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b1783a204ae4a843863b18d0f66be4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

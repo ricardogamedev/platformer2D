@@ -22,9 +22,25 @@ public class Player : MonoBehaviour
 
     [Header("Animation player")]
     public string boolRun = "Run";
+    public string triggerDeath = "Death";
     public Animator animator;
     public float playerSwipeDuration = .1f;
 
+    public HealthBase healthBase;
+
+    private void Awake()
+    {
+        if (healthBase != null)
+        {
+            healthBase.OnKill += OnPlayerKill;
+        }
+    }
+
+    private void OnPlayerKill()
+    {
+        healthBase.OnKill -= OnPlayerKill;
+        animator.SetTrigger(triggerDeath);
+    }
 
 
     private void Update()
@@ -33,7 +49,7 @@ public class Player : MonoBehaviour
         HandleMovement();
     }
     private void HandleMovement()
-    {   
+    {
         if (Input.GetKey(KeyCode.LeftControl))
         {
             _currentSpeed = speedRun;
@@ -49,14 +65,14 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             myRigidbody.velocity = new Vector2(-_currentSpeed, myRigidbody.velocity.y);
-                    
-            if(myRigidbody.transform.localScale.x != -1)
+
+            if (myRigidbody.transform.localScale.x != -1)
             {
                 myRigidbody.transform.DOScaleX(-1, playerSwipeDuration);
             }
-            
+
             animator.SetBool(boolRun, true);
-      
+
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
@@ -103,4 +119,8 @@ public class Player : MonoBehaviour
         myRigidbody.transform.DOScaleX(jumpScaleX, animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease);
     }
 
+    public void DestroyMe()
+    {
+        Destroy(gameObject);
+    }
 }

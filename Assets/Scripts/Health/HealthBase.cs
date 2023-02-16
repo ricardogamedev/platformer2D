@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HealthBase : MonoBehaviour
 {
+
+    public Action OnKill;
     public int startLife = 10;
 
     public bool destroyOnKill = false;
@@ -14,10 +17,12 @@ public class HealthBase : MonoBehaviour
 
     [SerializeField] private FlashColor _flashColor;
 
+
+
     private void Awake()
     {
         Init();
-        if(_flashColor == null)
+        if (_flashColor == null)
         {
             _flashColor = GetComponent<FlashColor>();
         }
@@ -39,7 +44,7 @@ public class HealthBase : MonoBehaviour
             Kill();
         }
 
-        if(_flashColor != null)
+        if (_flashColor != null)
         {
             _flashColor.Flash();
         }
@@ -53,6 +58,8 @@ public class HealthBase : MonoBehaviour
             Destroy(gameObject, delayToKill);
         }
 
+       // if (OnKill != null) OnKill.Invoke(); abaixo o jeito mais chique de escrever a mesma coisa
+        OnKill?.Invoke();
     }
 
 }
