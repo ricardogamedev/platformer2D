@@ -8,7 +8,8 @@ public class ItemManager : Singleton<ItemManager>
 {
 
     public int coins;
-    public TMP_Text text;
+  //  public TMP_Text text;
+    public TextMeshProUGUI uiTextCoins;
 
     private void Start()
     {
@@ -17,13 +18,22 @@ public class ItemManager : Singleton<ItemManager>
     private void Reset()
     {
         coins = 0;
-        text.text = coins.ToString("X " + coins);
+        UpdateUI();
+        //  text.text = coins.ToString("X " + coins);
     }
 
     public void AddCoins(int amount = 1)
     {
         coins += amount;
-        text.text = coins.ToString("X "+ coins);
+        //  text.text = coins.ToString("X "+ coins);
+        UpdateUI();
     }
+
+    private void UpdateUI()
+    {
+        uiTextCoins.text = coins.ToString("X " + coins);
+    }
+
+
 
 }
