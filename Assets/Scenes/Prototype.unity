@@ -5589,6 +5589,18 @@ PrefabInstance:
       propertyPath: healthBase
       value: 
       objectReference: {fileID: 7221358933068329191}
+    - target: {fileID: 7221358931808931423, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
+      propertyPath: sojumpScaleX
+      value: 
+      objectReference: {fileID: 11400000, guid: 9028fb830d30c434aa07c56d1ba9dded, type: 2}
+    - target: {fileID: 7221358931808931423, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
+      propertyPath: sojumpScaleY
+      value: 
+      objectReference: {fileID: 11400000, guid: 99c1f0795f8cdae4b9d82ce35e04f5f0, type: 2}
+    - target: {fileID: 7221358931808931423, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
+      propertyPath: soAnimationDuration
+      value: 
+      objectReference: {fileID: 11400000, guid: 51c95cf80e7c6b4468d231e962a2fba6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
 --- !u!114 &7221358933068329191 stripped
