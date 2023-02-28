@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     [Header("Setup")]
     public SOPlayerSetup soPlayerSetup;
 
+
     private Animator _currentPlayer;
 
     private void Awake()
@@ -116,3 +117,4 @@ public class Player : MonoBehaviour
         Destroy(gameObject);
     }
 }
+

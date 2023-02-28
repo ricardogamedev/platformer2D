@@ -378,7 +378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 49245162}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.825047, y: 12.206385, z: -7.379673}
+  m_LocalPosition: {x: -9.825045, y: 12.206385, z: -7.379673}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1493680119}
@@ -3822,7 +3822,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1473621402}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.825047, y: 12.206385, z: -7.379673}
+  m_LocalPosition: {x: -9.825045, y: 12.206385, z: -7.379673}
   m_LocalScale: {x: 1, y: 1.6377, z: 1}
   m_Children:
   - {fileID: 1221851718}
@@ -4342,6 +4342,11 @@ Transform:
   m_Father: {fileID: 1383643108}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1745216982 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4380016352579592746, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
+  m_PrefabInstance: {fileID: 7221358933068329190}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1828529721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5374,6 +5379,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 544817965}
+    - target: {fileID: 2209685384071255504, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7221358931808931408, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
       propertyPath: m_Size.x
       value: 3.8967257
@@ -5458,6 +5467,10 @@ PrefabInstance:
       propertyPath: soPlayerSetup
       value: 
       objectReference: {fileID: 11400000, guid: a43b7a7804a4919448f5b6624cc832d1, type: 2}
+    - target: {fileID: 7221358931808931423, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
+      propertyPath: _currentPlayer
+      value: 
+      objectReference: {fileID: 1745216982}
     - target: {fileID: 7221358931808931423, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
       propertyPath: soAnimationDuration
       value: 
