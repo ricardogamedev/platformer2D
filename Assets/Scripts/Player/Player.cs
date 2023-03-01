@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D myRigidbody;
     private float _currentSpeed;
 
-   // public Animator animator;
+    // public Animator animator;
     public HealthBase healthBase;
 
     [Header("Setup")]
@@ -25,6 +25,13 @@ public class Player : MonoBehaviour
         }
 
         _currentPlayer = Instantiate(soPlayerSetup.player, transform);
+
+        var gun = _currentPlayer.GetComponentInChildren<GunBase>();
+        if (gun != null)
+        {
+            gun.playerSideReference = transform;
+        }
+
     }
 
     private void OnPlayerKill()

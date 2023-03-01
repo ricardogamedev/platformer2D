@@ -97,6 +97,7 @@ MonoBehaviour:
   startLife: 10
   destroyOnKill: 1
   delayToKill: 1
+  _flashColor: {fileID: 0}
 --- !u!114 &7221358931808931423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,17 +111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidbody: {fileID: 7221358931808931411}
-  friction: {x: -0.3, y: 0}
-  speed: 20
-  speedRun: 30
-  forceJump: 30
-  jumpScaleY: 1.1
-  jumpScaleX: 0.9
-  animationDuration: 0.3
-  ease: 27
-  boolRun: Run
-  animator: {fileID: 4380016352579592746}
-  playerSwipeDuration: 0.1
+  healthBase: {fileID: 7221358931808931420}
+  soPlayerSetup: {fileID: 11400000, guid: a43b7a7804a4919448f5b6624cc832d1, type: 2}
 --- !u!1001 &7221358932538415861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -308,6 +300,10 @@ PrefabInstance:
       propertyPath: m_Bounds.m_Center.y
       value: -0.00046658516
       objectReference: {fileID: 0}
+    - target: {fileID: 7015768335417305795, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7221358931808931423}
     - target: {fileID: 7200338225950211352, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
       propertyPath: m_Bounds.m_Center.x
       value: -0.0000005662441
@@ -377,10 +373,5 @@ PrefabInstance:
 --- !u!4 &799203802561497162 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8007466312498025151, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
-  m_PrefabInstance: {fileID: 7221358932538415861}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &4380016352579592746 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6413013834153556191, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
   m_PrefabInstance: {fileID: 7221358932538415861}
   m_PrefabAsset: {fileID: 0}
