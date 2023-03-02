@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5655944501248610510}
   - component: {fileID: 3314807643367078668}
   m_Layer: 0
-  m_Name: PFB_Special_Coin
+  m_Name: PFB_Coin_Special
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   compareTag: Player
+  isCoinSpecial: 1
 --- !u!58 &3314807643367078668
 CircleCollider2D:
   m_ObjectHideFlags: 0
