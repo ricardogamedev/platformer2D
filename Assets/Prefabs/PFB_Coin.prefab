@@ -112,7 +112,7 @@ Transform:
   m_LocalScale: {x: 2.0995347, y: 1.1533931, z: 0.78414}
   m_Children:
   - {fileID: 1787329088655580544}
-  - {fileID: 7150417725706876770}
+  - {fileID: 8574688743240537638}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -129,7 +129,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   compareTag: Player
-  particleSystem: {fileID: 7150417725706876771}
+  particleSystem: {fileID: 8574688743240537639}
+  timeToHide: 0.1
+  graphicItem: {fileID: 1787329088655580545}
   isCoinSpecial: 0
 --- !u!58 &3314807643367078668
 CircleCollider2D:
@@ -147,13 +149,21 @@ CircleCollider2D:
   m_Offset: {x: -0.014533101, y: -0.0041782414}
   serializedVersion: 2
   m_Radius: 0.4227471
---- !u!1001 &355525710783795033
+--- !u!1001 &1237115724146142749
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 1787329088918495457}
     m_Modifications:
+    - target: {fileID: 7481736587947243578, guid: c632ec8fe02eca144ae142c713532c8e, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481736587947243578, guid: c632ec8fe02eca144ae142c713532c8e, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7481736587947243579, guid: c632ec8fe02eca144ae142c713532c8e, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -200,17 +210,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7481736587947243580, guid: c632ec8fe02eca144ae142c713532c8e, type: 3}
       propertyPath: m_Name
-      value: PFB_ParticleSystem
+      value: PFB_ParticleSystem_Coin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c632ec8fe02eca144ae142c713532c8e, type: 3}
---- !u!4 &7150417725706876770 stripped
+--- !u!4 &8574688743240537638 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7481736587947243579, guid: c632ec8fe02eca144ae142c713532c8e, type: 3}
-  m_PrefabInstance: {fileID: 355525710783795033}
+  m_PrefabInstance: {fileID: 1237115724146142749}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &7150417725706876771 stripped
+--- !u!198 &8574688743240537639 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 7481736587947243578, guid: c632ec8fe02eca144ae142c713532c8e, type: 3}
-  m_PrefabInstance: {fileID: 355525710783795033}
+  m_PrefabInstance: {fileID: 1237115724146142749}
   m_PrefabAsset: {fileID: 0}

@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidbody: {fileID: 7221358931808931411}
   healthBase: {fileID: 7221358931808931420}
-  soPlayerSetup: {fileID: 11400000, guid: a43b7a7804a4919448f5b6624cc832d1, type: 2}
+  soPlayerSetup: {fileID: 11400000, guid: 2cf92ffa93b67d149904a4182b4acb0f, type: 2}
 --- !u!1001 &7221358932538415861
 PrefabInstance:
   m_ObjectHideFlags: 0
