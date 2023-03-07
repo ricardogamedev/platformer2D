@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBase : MonoBehaviour
 {
-    public int damage = 10;
+    public int damage = 5;
 
     public Animator animator;
     public string triggerAttack = "Attack";

@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
 
     private bool IsGrounded()
     {
-       // Debug.DrawRay(transform.position, -Vector2.up, Color.magenta, distToGround + spaceToGround);
+        // Debug.DrawRay(transform.position, -Vector2.up, Color.magenta, distToGround + spaceToGround);
         return Physics2D.Raycast(transform.position, -Vector2.up, distToGround + spaceToGround);
     }
 
@@ -107,11 +107,11 @@ public class Player : MonoBehaviour
         //nesse if de baixo, se a velocidade em x é maior que zero, personagem está andando. Aí eu desacelero com a fricção a cada frame
         // a soma ou subtração da fricção depende do eixo X, para a esquerda ele é negativo, por isso vamos subtraindo
         if (myRigidbody.velocity.x > 0)
-        {
+        {            
             myRigidbody.velocity += soPlayerSetup.friction;
         }
-        else if (myRigidbody.velocity.x < 0)
-        {
+        else if (myRigidbody.velocity.x < 0)        {
+         
             myRigidbody.velocity -= soPlayerSetup.friction;
         }
     }
@@ -132,8 +132,9 @@ public class Player : MonoBehaviour
     private void PlayJumpVFX()
     {
         VFXManager.Instance.PlayVFXByType(VFXManager.VFXType.JUMP, transform.position);
-    //    if (jumpVFX != null) jumpVFX.Play();
+        //    if (jumpVFX != null) jumpVFX.Play();
     }
+
 
     private void HandleScaleJump()
     {

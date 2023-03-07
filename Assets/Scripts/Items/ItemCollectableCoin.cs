@@ -7,13 +7,21 @@ public class ItemCollectableCoin : ItemCollectableBase
 
     public bool isCoinSpecial = false;
 
+
     protected override void OnCollect()
     {
+        PlayCoinVFX();
         base.OnCollect();
 
-        if(isCoinSpecial)
-        ItemManager.Instance.AddCoins(2);
+
+        if (isCoinSpecial)
+            ItemManager.Instance.AddCoins(2);
         else
-        ItemManager.Instance.AddCoins();
+            ItemManager.Instance.AddCoins();
+    }
+
+    public void PlayCoinVFX()
+    {
+        VFXManager.Instance.PlayVFXByType(VFXManager.VFXType.COIN, transform.position);
     }
 }
