@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
     [Header("Setup")]
     public SOPlayerSetup soPlayerSetup;
 
-
     private Animator _currentPlayer;
 
     [Header("Jump Collision Check")]

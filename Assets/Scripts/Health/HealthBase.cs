@@ -18,7 +18,6 @@ public class HealthBase : MonoBehaviour
     [SerializeField] private FlashColor _flashColor;
 
 
-
     private void Awake()
     {
         Init();
@@ -58,7 +57,7 @@ public class HealthBase : MonoBehaviour
             Destroy(gameObject, delayToKill);
         }
 
-       // if (OnKill != null) OnKill.Invoke(); abaixo o jeito mais chique de escrever a mesma coisa
+        // if (OnKill != null) OnKill.Invoke(); abaixo o jeito mais chique de escrever a mesma coisa
         OnKill?.Invoke();
     }
 
