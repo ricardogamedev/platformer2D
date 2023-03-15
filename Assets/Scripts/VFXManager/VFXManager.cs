@@ -10,7 +10,8 @@ public class VFXManager : Singleton<VFXManager>
         JUMP,
         COIN,
         FIREFLIES,
-        WALK
+        WALK,
+        LASER
     }
 
     public List<VFXManagerSetup> vfxSetup;

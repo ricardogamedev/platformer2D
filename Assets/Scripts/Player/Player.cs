@@ -6,10 +6,12 @@ using DG.Tweening;
 public class Player : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
-    private float _currentSpeed;
-
+    public AudioSource myAudioSource;
     // public Animator animator;
     public HealthBase healthBase;
+
+    private float _currentSpeed;
+   
 
     [Header("Setup")]
     public SOPlayerSetup soPlayerSetup;
@@ -124,6 +126,7 @@ public class Player : MonoBehaviour
 
             DOTween.Kill(myRigidbody.transform);
             HandleScaleJump();
+            PlayJumpSound();
             PlayJumpVFX();
         }
     }
@@ -133,6 +136,12 @@ public class Player : MonoBehaviour
         VFXManager.Instance.PlayVFXByType(VFXManager.VFXType.JUMP, transform.position);
         //    if (jumpVFX != null) jumpVFX.Play();
     }
+
+    public void PlayJumpSound()
+    {
+        myAudioSource.Play();
+    }
+
 
 
     private void HandleScaleJump()

@@ -5,13 +5,14 @@ using UnityEngine;
 public class ProjectileBase : MonoBehaviour
 {
     public Vector3 direction;
-    public float timeToDestroy = 1f;
+    public float timeToDestroy = 3;
     public float side = 1;
 
     public int damageAmount = 1;
 
     private void Awake()
     {
+        PlayShootVFX();
         Destroy(gameObject, timeToDestroy);
     }
 
@@ -29,5 +30,10 @@ public class ProjectileBase : MonoBehaviour
             enemy.Damage(damageAmount);
             Destroy(gameObject);
         }
+    }
+
+    private void PlayShootVFX()
+    {
+        VFXManager.Instance.PlayVFXByType(VFXManager.VFXType.LASER, transform.position);
     }
 }

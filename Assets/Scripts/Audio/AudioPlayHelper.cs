@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioPlayHelper : MonoBehaviour
 {
-    public KeyCode keyCode = KeyCode.P;
+    public KeyCode keyCode;
     public AudioSource audioSource;
 
     private void Update()
@@ -17,6 +17,6 @@ public class AudioPlayHelper : MonoBehaviour
 
     public void Play()
     {
-        audioSource.Play();
+       if(audioSource != null) audioSource.Play();
     }
 }

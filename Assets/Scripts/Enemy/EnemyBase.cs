@@ -10,20 +10,23 @@ public class EnemyBase : MonoBehaviour
     public string triggerAttack = "Attack";
     public string triggerKill = "Kill";
     public float timeToDestroy = 1f;
+    public AudioSource myAudioSource;
 
     public HealthBase healthBase;
 
     private void Awake()
     {
-        if(healthBase != null)
+        if (healthBase != null)
         {
+            //callback
+           // PlayDamageTakenNoise();
             healthBase.OnKill += OnEnemyKill;
         }
     }
 
     private void OnEnemyKill()
     {
-            healthBase.OnKill -= OnEnemyKill;
+        healthBase.OnKill -= OnEnemyKill;
         PlayKillAnimation();
         Destroy(gameObject, timeToDestroy);
     }
@@ -34,7 +37,7 @@ public class EnemyBase : MonoBehaviour
         Debug.Log(collision.transform.name);
         var health = collision.gameObject.GetComponent<HealthBase>();
 
-        if(health != null)
+        if (health != null)
         {
             health.Damage(damage);
             PlayAttackAnimation();
@@ -50,8 +53,15 @@ public class EnemyBase : MonoBehaviour
         animator.SetTrigger(triggerKill);
     }
 
-    public void Damage (int amount)
+    private void PlayDamageTakenNoise()
     {
+     
+        myAudioSource.Play();
+    }
+
+    public void Damage(int amount)
+    {
+        PlayDamageTakenNoise();
         healthBase.Damage(amount);
     }
 }

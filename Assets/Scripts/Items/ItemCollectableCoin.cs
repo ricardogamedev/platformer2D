@@ -13,7 +13,6 @@ public class ItemCollectableCoin : ItemCollectableBase
         PlayCoinVFX();
         base.OnCollect();
 
-
         if (isCoinSpecial)
             ItemManager.Instance.AddCoins(2);
         else
