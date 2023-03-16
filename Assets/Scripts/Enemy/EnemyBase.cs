@@ -11,6 +11,7 @@ public class EnemyBase : MonoBehaviour
     public string triggerKill = "Kill";
     public float timeToDestroy = 1f;
     public AudioSource myAudioSource;
+    public EnemyMovement enemyMovement;
 
     public HealthBase healthBase;
 
@@ -54,8 +55,7 @@ public class EnemyBase : MonoBehaviour
     }
 
     private void PlayDamageTakenNoise()
-    {
-     
+    {     
         myAudioSource.Play();
     }
 

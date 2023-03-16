@@ -6,8 +6,7 @@ public class ItemCollectableBase : MonoBehaviour
 {
 
     public string compareTag = "Player";
-    public ParticleSystem particleSystem;
-    public float timeToHide = 1;
+     public float timeToHide = 1;
     public GameObject graphicItem;
 
     [Header("Sounds")]

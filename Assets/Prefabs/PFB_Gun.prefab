@@ -207,8 +207,7 @@ MonoBehaviour:
   positionToShoot: {fileID: 7694257763616465192}
   playerSideReference: {fileID: 7221358931808931422, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
   myAudioSource: {fileID: 3167007613053744935}
-  timeBetweenShoot: 0.5
-  time: 0.5
+  time: 0.8
 --- !u!1001 &3917784015585056514
 PrefabInstance:
   m_ObjectHideFlags: 0

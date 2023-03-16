@@ -55,6 +55,9 @@ public class Player : MonoBehaviour
     {
         healthBase.OnKill -= OnPlayerKill;
         _currentPlayer.SetTrigger(soPlayerSetup.triggerDeath);
+        myRigidbody.constraints = RigidbodyConstraints2D.FreezePosition;
+   
+
     }
 
 
