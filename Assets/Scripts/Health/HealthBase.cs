@@ -52,6 +52,7 @@ public class HealthBase : MonoBehaviour
     private void Kill()
     {
         _isDead = true;
+
         if (destroyOnKill)
         {
             Destroy(gameObject, delayToKill);

@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public AudioSource myAudioSource;
     // public Animator animator;
     public HealthBase healthBase;
+    public UIShowGameOver showGameOverUI;
 
     private float _currentSpeed;
    
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
     public SOPlayerSetup soPlayerSetup;
 
     private Animator _currentPlayer;
+    private PauseManager pauseManager;
 
     [Header("Jump Collision Check")]
     public Collider2D collider2D;
@@ -53,11 +55,11 @@ public class Player : MonoBehaviour
 
     private void OnPlayerKill()
     {
+       
         healthBase.OnKill -= OnPlayerKill;
         _currentPlayer.SetTrigger(soPlayerSetup.triggerDeath);
         myRigidbody.constraints = RigidbodyConstraints2D.FreezePosition;
-   
-
+        showGameOverUI.GameOverUI();
     }
 
 

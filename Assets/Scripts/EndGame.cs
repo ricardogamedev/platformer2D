@@ -7,6 +7,7 @@ public class EndGame : MonoBehaviour
     public string tagToCompare = "Player";
 
     public GameObject uiEndGame;
+    public PauseManager pauseManager;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,5 +20,6 @@ public class EndGame : MonoBehaviour
     public void CallEndGame()
     {
         uiEndGame.SetActive(true);
+        pauseManager.Pause();
     }
 }

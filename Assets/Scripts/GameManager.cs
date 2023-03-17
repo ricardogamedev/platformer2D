@@ -22,6 +22,7 @@ public class GameManager : Singleton<GameManager>
     public Ease ease = Ease.OutBack;
 
     private GameObject _currentPlayer;
+    public PauseManager pauseManager;
 
     private void Start()
     {
@@ -38,5 +39,6 @@ public class GameManager : Singleton<GameManager>
         _currentPlayer.transform.position = startPoint.transform.position;
         _currentPlayer.transform.DOScale(0, duration).SetEase(ease).From().SetDelay(delay);
     }
+
   
 }
