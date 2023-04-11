@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
     public FlashColor flashColor;
 
     private float _currentSpeed;
-   
 
     [Header("Setup")]
     public SOPlayerSetup soPlayerSetup;
@@ -29,12 +28,16 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+
         if (healthBase != null)
         {
             healthBase.OnKill += OnPlayerKill;
         }
 
         _currentPlayer = Instantiate(soPlayerSetup.player, transform);
+
+        flashColor = _currentPlayer.GetComponentInChildren<FlashColor>();
+        healthBase = _currentPlayer.GetComponentInChildren<HealthBase>();
 
         var gun = _currentPlayer.GetComponentInChildren<GunBase>();
         if (gun != null)
@@ -56,7 +59,7 @@ public class Player : MonoBehaviour
 
     private void OnPlayerKill()
     {
-       
+
         healthBase.OnKill -= OnPlayerKill;
         _currentPlayer.SetTrigger(soPlayerSetup.triggerDeath);
         myRigidbody.constraints = RigidbodyConstraints2D.FreezePosition;
@@ -114,11 +117,12 @@ public class Player : MonoBehaviour
         //nesse if de baixo, se a velocidade em x é maior que zero, personagem está andando. Aí eu desacelero com a fricção a cada frame
         // a soma ou subtração da fricção depende do eixo X, para a esquerda ele é negativo, por isso vamos subtraindo
         if (myRigidbody.velocity.x > 0)
-        {            
+        {
             myRigidbody.velocity += soPlayerSetup.friction;
         }
-        else if (myRigidbody.velocity.x < 0)        {
-         
+        else if (myRigidbody.velocity.x < 0)
+        {
+
             myRigidbody.velocity -= soPlayerSetup.friction;
         }
     }

@@ -39,6 +39,5 @@ public class GameManager : Singleton<GameManager>
         _currentPlayer.transform.position = startPoint.transform.position;
         _currentPlayer.transform.DOScale(0, duration).SetEase(ease).From().SetDelay(delay);
     }
-
   
 }

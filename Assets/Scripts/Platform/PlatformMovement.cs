@@ -23,12 +23,10 @@ public class PlatformMovement : MonoBehaviour
     {
         _startPosition = gameObject.transform.position;
 
-        time = 0f;
-
         while (gameObject.transform.position != target)
         {
             gameObject.transform.position = Vector3.Lerp(_startPosition, target, speed);
-            time += Time.deltaTime;
+            speed += Time.deltaTime * time;
             yield return null;
 
         }
