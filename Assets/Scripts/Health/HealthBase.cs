@@ -42,11 +42,12 @@ public class HealthBase : MonoBehaviour
         {
             Kill();
         }
-
+                
         if (_flashColor != null)
         {
             _flashColor.Flash();
         }
+
     }
 
     private void Kill()

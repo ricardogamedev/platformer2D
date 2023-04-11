@@ -886,6 +886,7 @@ GameObject:
   - component: {fileID: 1192614676204816613}
   - component: {fileID: 6331628947478391141}
   - component: {fileID: 8141525508850361198}
+  - component: {fileID: 6399874184765744029}
   m_Layer: 0
   m_Name: PFB_Astronaut
   m_TagString: Untagged
@@ -984,7 +985,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16f891ab1d044844b937ee3491434dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!114 &1192614676204816613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1120,6 +1120,40 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a476e34385a8f43f5a7cd7280badc54f, type: 3}
   audioSourceList:
   - {fileID: 6331628947478391141}
+--- !u!114 &6399874184765744029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8835229685202505509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d6507aaec3d494f8c368324d4203b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderers:
+  - {fileID: 3971700845632200199}
+  - {fileID: 7301150156096908687}
+  - {fileID: 3381466231696810971}
+  - {fileID: 3517653971288608096}
+  - {fileID: 8789406625549365556}
+  - {fileID: 2936941509222344250}
+  - {fileID: 1918426282720007879}
+  - {fileID: 7274142433465299202}
+  - {fileID: 4989476794605110809}
+  - {fileID: 5842915932965311795}
+  - {fileID: 2672610142402919951}
+  - {fileID: 4546307769011690981}
+  - {fileID: 5421898557666172458}
+  - {fileID: 9145059997782691051}
+  - {fileID: 6935664543094779335}
+  - {fileID: 9069580248349405312}
+  - {fileID: 1181252494661186000}
+  - {fileID: 1637968192941115163}
+  - {fileID: 7718624693209762858}
+  color: {r: 1, g: 0, b: 0, a: 1}
+  duration: 0.1
 --- !u!1001 &2987335437580250577
 PrefabInstance:
   m_ObjectHideFlags: 0

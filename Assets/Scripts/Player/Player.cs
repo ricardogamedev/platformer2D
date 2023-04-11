@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     // public Animator animator;
     public HealthBase healthBase;
     public UIShowGameOver showGameOverUI;
+    public FlashColor flashColor;
 
     private float _currentSpeed;
    
