@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
         _currentPlayer = Instantiate(soPlayerSetup.player, transform);
 
         flashColor = _currentPlayer.GetComponentInChildren<FlashColor>();
-        healthBase = _currentPlayer.GetComponentInChildren<HealthBase>();
+    
 
         var gun = _currentPlayer.GetComponentInChildren<GunBase>();
         if (gun != null)

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7221358931808931408}
   - component: {fileID: 7221358931808931411}
   - component: {fileID: 7221358931808931423}
+  - component: {fileID: 3086763357760632300}
   m_Layer: 0
   m_Name: PFB_Player
   m_TagString: Player
@@ -104,6 +105,22 @@ MonoBehaviour:
   distToGround: 0
   spaceToGround: 0.1
   jumpVFX: {fileID: 6774353209595063244, guid: b74c22e084042994cb43682f54b12db1, type: 3}
+--- !u!114 &3086763357760632300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7221358931808931410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b1783a204ae4a843863b18d0f66be4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startLife: 10
+  destroyOnKill: 1
+  delayToKill: 1
+  _flashColor: {fileID: 0}
 --- !u!1001 &3701273584694584285
 PrefabInstance:
   m_ObjectHideFlags: 0

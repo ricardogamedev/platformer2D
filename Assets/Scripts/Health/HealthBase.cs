@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class HealthBase : MonoBehaviour
 {
-
     public Action OnKill;
     public int startLife = 10;
 
@@ -23,7 +22,9 @@ public class HealthBase : MonoBehaviour
         Init();
         if (_flashColor == null)
         {
-            _flashColor = GetComponent<FlashColor>();
+          //  _flashColor = GetComponent<FlashColor>();
+
+            _flashColor = gameObject.GetComponentInChildren<FlashColor>();
         }
     }
 

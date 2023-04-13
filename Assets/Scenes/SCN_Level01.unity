@@ -1211,6 +1211,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &293611302 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3086763357760632300, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
+  m_PrefabInstance: {fileID: 7221358933068329190}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b1783a204ae4a843863b18d0f66be4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &333653465
 GameObject:
   m_ObjectHideFlags: 0
@@ -2628,14 +2639,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1292331513}
     m_Modifications:
-    - target: {fileID: 991526573068557826, guid: 041b42fb08da6414493b93c7239df696, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1059941447781683817, guid: 041b42fb08da6414493b93c7239df696, type: 3}
-      propertyPath: m_Bounds.m_Center.x
-      value: -0.1770401
-      objectReference: {fileID: 0}
     - target: {fileID: 1356911060076103390, guid: 041b42fb08da6414493b93c7239df696, type: 3}
       propertyPath: m_Name
       value: PFB_Dev_Enemy_01 (5)
@@ -2683,18 +2686,6 @@ PrefabInstance:
     - target: {fileID: 1356911060076103391, guid: 041b42fb08da6414493b93c7239df696, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144586565165125260, guid: 041b42fb08da6414493b93c7239df696, type: 3}
-      propertyPath: m_Bounds.m_Center.x
-      value: -0.15818024
-      objectReference: {fileID: 0}
-    - target: {fileID: 4019913242388095168, guid: 041b42fb08da6414493b93c7239df696, type: 3}
-      propertyPath: m_Bounds.m_Center.x
-      value: -0.018484116
-      objectReference: {fileID: 0}
-    - target: {fileID: 7679448455284346318, guid: 041b42fb08da6414493b93c7239df696, type: 3}
-      propertyPath: m_Bounds.m_Center.x
-      value: 0.019865036
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 041b42fb08da6414493b93c7239df696, type: 3}
@@ -7066,6 +7057,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 494866260}
     m_Modifications:
+    - target: {fileID: 3086763357760632300, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
+      propertyPath: _flashColor
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086763357760632300, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
+      propertyPath: delayToKill
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7221358931808931410, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
       propertyPath: m_Name
       value: Player
@@ -7114,6 +7113,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7221358931808931423, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
+      propertyPath: healthBase
+      value: 
+      objectReference: {fileID: 293611302}
     - target: {fileID: 7221358931808931423, guid: 9fe2b74d0b52ac840995b5f00175f56b, type: 3}
       propertyPath: showGameOverUI
       value: 
