@@ -4,57 +4,28 @@ using UnityEngine;
 
 public class PlatformMovement : MonoBehaviour
 {
-    public List<Transform> positions;
-    public Transform position;
-    private float _timeElapsed = 0f;
-    public float duration = 2f;
-    private int _index;
+
+    [SerializeField] private Transform _initialPosition;
+    [SerializeField] private Transform _position;
+    [SerializeField] private float _speed;
+    [SerializeField] private float _time;
+    [SerializeField] private int _length;
+
+
+    private void Start()
+    {
+        transform.position = _initialPosition.position;
+    }
 
     private void Update()
     {
-        LerpingLikeNoTomorrow();
-        // MovePlatform();
+        MovePlatform();
     }
 
-
-    private void LerpingLikeNoTomorrow()
+    public void MovePlatform()
     {
-        var initialPosition = transform.position;
-
-        while (_timeElapsed < duration)
-        {
-            transform.position = Vector3.Lerp(initialPosition, position.transform.position, (_timeElapsed/duration));
-            _timeElapsed += Time.deltaTime;
-        }
-        _timeElapsed = 0f;
+        _time = Mathf.PingPong(Time.time * _speed, _length);
+        transform.position = Vector3.Lerp(_initialPosition.transform.position, _position.transform.position, _time);
     }
 
-    /*
-    private void MovePlatform()
-    {
-        float timeElapsed = 0f;
-
-        while (true)
-        {
-            var currentPosition = transform.position;
-
-            while (_timeElapsed < duration)
-            {
-                transform.position = Vector3.Lerp(currentPosition, positions[_index].transform.position, (_timeElapsed / duration));
-                _timeElapsed += Time.deltaTime;
-            }
-
-            NextIndex();
-            _timeElapsed = 0;
-
-        }
-
-    }
-
-    private void NextIndex()
-    {
-        _index++;
-        if (_index >= positions.Count) _index = 0;
-    }
-    */
 }
