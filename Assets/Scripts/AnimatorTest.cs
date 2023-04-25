@@ -10,6 +10,10 @@ public class AnimatorTest : MonoBehaviour
     public KeyCode keyToExit = KeyCode.D;
     public string triggerToPlay = "FlyBool";
 
+
+
+
+
     private void OnValidate()
     {
         if (animator == null) animator = GetComponent<Animator>();
